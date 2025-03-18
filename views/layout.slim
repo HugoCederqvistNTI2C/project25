@@ -7,12 +7,13 @@ html lang="en"
     title Document
   body
     nav
-      a href="/" Startsida
-      a href="/pass" Träningspass
-      a href="/register" Registrering
-      a href="/login" Login
-      
+  a href="/" Startsida
+  a href="/pass" Träningspass
+  a href="/register" Registrering
+  a href="/login" Login
+  - if @logged_in
+    a href="/logout" Logga ut      
 
-    h1 Gym e bra !
+  h1 Gym e bra !
 
-    == yield
+  == yield

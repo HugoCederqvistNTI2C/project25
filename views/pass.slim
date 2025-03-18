@@ -1,0 +1,9 @@
+h1 Dina träningspass
+a href="/pass/new" Skapa nytt pass
+ul
+  - @passes.each do |pass|
+    li
+      | #{pass['name']} - #{pass['exce']} - Vikt: #{pass['vikt']} kg - #{pass['sets']} sets x #{pass['reps']} reps
+      a href="/pass/edit/#{pass['id']}" Redigera
+      form action="/pass/delete/#{pass['id']}" method="POST" style="display:inline;"
+        input type="submit" value="Radera"

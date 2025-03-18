@@ -1,0 +1,18 @@
+h1 Redigera träningspass
+form action="/pass/update/#{@pass['id']}" method="POST"
+  label Namn:
+  input type="text" name="name" value=@pass['name']
+
+  label Övning:
+  input type="text" name="exce" value=@pass['exce']
+
+  label Vikt (kg):
+  input type="number" name="vikt" value=@pass['vikt']
+
+  label Sets:
+  input type="number" name="sets" value=@pass['sets']
+
+  label Reps:
+  input type="number" name="reps" value=@pass['reps']
+
+  input type="submit" value="Uppdatera pass"
